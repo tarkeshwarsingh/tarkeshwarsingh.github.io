@@ -28,6 +28,9 @@ font-family: 'Roboto', sans-serif;
 	overflow: hidden;
 	margin-right: 0;
 	width: 100%;
+	background-image: url('./images/Fold1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 #backgroundvideo {
