@@ -21,9 +21,11 @@ $(document).ready(function () {
 
         if (y >= z) {
             menu.removeClass('menuBar').addClass('light-menuBar');
+            document.getElementById("logo").style.backgroundImage="url('./Lumos_Files/images/LumosFinalLogo.png')";
         }
         else{
             menu.removeClass('light-menuBar').addClass('menuBar');
+         	document.getElementById("logo").style.backgroundImage="url('./Lumos_Files/images/LumosFinalLogo1.png')";   
         }
     });
     
@@ -41,7 +43,6 @@ $(document).ready(function () {
 
 });
 </script>
-
 </head>
 
 <body>
@@ -60,7 +61,7 @@ $(document).ready(function () {
 <div id="fold1background" class ="fold1background">
 	<div id="backgroundvideo">
 		<video autoplay loop poster="./Lumos_Files/images/Fold1.png" id="bgvid">
-			<source src="./Lumos_Files/images/Lumos_Website_2_hd720.webm" type="video/webm">
+			<source src="./Lumos_Files/images/Fold1_new.webm" type="video/webm">
 			<source src="./Lumos_Files/images/Lumos_Website_2_hd720.mp4" type="video/mp4">
 		</video>
 	</div>
@@ -68,18 +69,12 @@ $(document).ready(function () {
 <div class = "slide menuBar">
 <div class="wrap">
    <div id = "menuBar"> 
-    <div class = "logo">
-   		<h1> 
-   			<a href="http://getlumos.co/" title="" rel="home"> 
-   				<img src="./Lumos_Files/images/Logo.png">
-   				<img src="./Lumos_Files/images/Lumos_TextLogo.png">
-   			</a>
-   		</h1>
+    <div class = "logo" id="logo">
     </div>
 	<ul class="nav">
 		<li class="business_solutions" id="business_solutions" ><a href=""><span>Business Solutions</span></a></li>
-        <li class="case_studies" id="case_studies"><a href=""><span>Case Studies</span></a></li>
-        <li class="preorder" id="preorder" ><a class = "preordernow" id = "preordernow">Pre-Order Lumos</a></li>
+        <li class="case_studies" id="case_studies"><a href="https://www.medium.com/@LumosAutomation"><span>Blog</span></a></li>
+        <li class="preorder" id="preorder" ><a class = "preordernow" id = "preordernow">Contact Us</a></li>
     </ul>
 </div>
 </div>
@@ -156,23 +151,25 @@ $(document).ready(function () {
 <div class="clear"></div>
 <div id="fold6">
 <div class="wrap">
-	<div id="fold6image"><img src="./Lumos_Files/images/Fold6.png"></div>
+	<div id="fold6image">
+	
+	</div>
 	<div id="fold6list">
 	<ol id="list">
-		<li id="list1"><div class="listimage1"><a>Control all your appliances using your smartphone from anywhere in the world.</a></div>
+		<li id="list1"><div class="listimage1" id="listimage1"><a>Control all your appliances using your smartphone from anywhere in the world.</a></div>
 		</li>
 		<li id="list2">
-			<div class="listimage2"><a>View all your power consumption data from your home appliances in real time.</a></div>
+			<div class="listimage2" id="listimage2"><a>View all your power consumption data from your home appliances in real time.</a></div>
 		</li>
 		<li id="list3">
-			<div class="listimage3"><a>Get notifications if you leave home without switching off an appliance!</a></div>
+			<div class="listimage3" id="listimage1"><a>Get notifications if you leave home without switching off an appliance!</a></div>
 		</li>
 	</ol>
 	</div>
 </div>
 </div>
 
-<!-- fold 6 starts here -->
+<!-- fold 7 starts here 
 <div class="clear"></div>
 <div id="fold7">
 	<div class="wrap">
@@ -190,7 +187,7 @@ $(document).ready(function () {
 			</tr>
 		</table>
 	</div>
-</div>
+</div>-->
 
 <!-- footer starts here -->
 <div class="clear"></div>
