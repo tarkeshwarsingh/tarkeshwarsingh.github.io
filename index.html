@@ -44,11 +44,73 @@ $(document).ready(function () {
 });
 </script>
 
-<script type="text/javascript">
-$( '#listimage2' ).mouseover(function() {
-	$( '#fold6image' ).css('background-image', 'url('./Lumos_Files/images/LumosFinalLogo1.png')');
-}); 
-</script>
+
+    <script>
+
+        //an image width in pixels 
+        var imageWidth = 300;
+    
+
+        //DOM and all content is loaded 
+        $(window).ready(function() {
+            
+            var currentImage = 0;
+
+            //set image count 
+            var allImages = $('#slideshow li img').length;
+            
+            //setup slideshow frame width
+            $('#slideshow ul').width(allImages*imageWidth);
+
+            //attach click event to slideshow buttons
+            $('.listimage2').hover(function(){
+                
+                //increase image counter
+                currentImage=1;
+                //if we are at the end let set it to 0
+                //if(currentImage>=allImages) currentImage = 0;
+                //calcualte and set position
+                setFramePosition(currentImage);
+
+            });
+            //attach click event to slideshow buttons
+            $('.listimage1').hover(function(){
+                
+                //increase image counter
+                currentImage= 0;
+                //if we are at the end let set it to 0
+                //if(currentImage>=allImages) currentImage = 0;
+                //calcualte and set position
+                setFramePosition(currentImage);
+
+            });
+
+
+            $('.listimage3').hover(function(){
+                
+                //decrease image counter
+                currentImage = 2;
+                //if we are at the end let set it to 0
+                //if(currentImage<0) currentImage = allImages-1;
+                //calcualte and set position
+                setFramePosition(currentImage);
+
+            });
+           
+        });
+
+        //calculate the slideshow frame position and animate it to the new position
+        function setFramePosition(pos){
+            
+            //calculate position
+            var px = imageWidth*pos*-1;
+            //set ul left position
+            $('#slideshow ul').animate({
+                left: px
+            }, 0);
+        }
+
+    </script>
 
 </head>
 
@@ -80,9 +142,9 @@ $( '#listimage2' ).mouseover(function() {
     	<a href=""><img src="./Lumos_Files/images/Logohref.png"></a>
     </div>
 	<ul class="nav">
-		<li class="business_solutions" id="business_solutions" ><a href="./businesssolutions.html"><span>Business Solutions</span></a></li>
+		<li class="business_solutions" id="business_solutions" ><a href=""><span>Business Solutions</span></a></li>
         <li class="case_studies" id="case_studies"><a href="https://www.medium.com/@LumosAutomation"><span>Blog</span></a></li>
-        <li class="preorder" id="preorder" ><a class = "preordernow" id = "preordernow" href="mailto:contactus@getlumos.co" target="_blank">Contact Us</a></li>
+        <li class="preorder" id="preorder" ><a class = "preordernow" id = "preordernow">Contact Us</a></li>
     </ul>
 </div>
 </div>
@@ -160,7 +222,13 @@ $( '#listimage2' ).mouseover(function() {
 <div id="fold6">
 <div class="wrap">
 	<div id="fold6image">
-	
+	<div id="slideshow">
+       <ul>
+            <li><img src="./Lumos_Files/images/MobileApp1.png" alt="photo1" /></li>
+            <li><img src="./Lumos_Files/images/Insights.png" alt="photo2" /></li>
+            <li><img src="./Lumos_Files/images/Notifications.png" alt="photo3" /></li>
+       </ul>
+    </div>
 	</div>
 	<div id="fold6list">
 	<ol id="list">
@@ -170,7 +238,7 @@ $( '#listimage2' ).mouseover(function() {
 			<div class="listimage2" id="listimage2"><a>View all your power consumption data from your home appliances in real time.</a></div>
 		</li>
 		<li id="list3">
-			<div class="listimage3" id="listimage1"><a>Get notifications if you leave home without switching off an appliance!</a></div>
+			<div class="listimage3" id="listimage3"><a>Get notifications if you leave home without switching off an appliance!</a></div>
 		</li>
 	</ol>
 	</div>
